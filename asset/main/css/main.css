@@ -1,0 +1,21 @@
+#player{
+    background-color: #050505;
+}
+
+.cta{
+    z-index: 1;
+    font-size: 2em;
+}
+
+.full-screen{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    grid-template-areas: "inner-div";
+}
+
+.stack{
+    grid-area: inner-div;
+}
