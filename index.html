@@ -15,13 +15,19 @@
 
   </head>
   <body>
-    <audio id="audsrc" src="asset/audio/un-monde-sans-danger.mp3"></audio>
+    <audio id="audsrc" src="asset/audio/un-monde-sans-danger.mp3" onplay="audTrg()" ontimeupdate="audUpt()" onpause="audTrg()"></audio>
     <div id="player" class="full-screen ">
       <div class="container stack">
+        <div class="row d-flex text-center align-items-center">
+          <p class="my-0" id="audtime"></p>
+        </div>
         <div class="row d-flex justify-content-center text-center">
-          <div class="cta col text-end"><i id="bw" class="fa fa-step-backward" onclick="backward()"></i></div>
-          <div class="cta col text-center"><i id="pl" class="fa fa-play" onclick="play()"></i><i id="ps" class="fa fa-pause" onclick="pause()"></i></div>
-          <div class="cta col text-start"><i id="fw" class="fa fa-step-forward" onclick="forward()"></i></div>
+          <div class="cta col text-end"><i id="bw" class="fa fa-step-backward" onclick="btnBwd()"></i></div>
+          <div class="cta col text-center"><i id="pl" class="fa fa-play" onclick="btnPly()"></i><i id="ps" class="fa fa-pause d-none" onclick="btnPse()"></i></div>
+          <div class="cta col text-start"><i id="fw" class="fa fa-step-forward" onclick="btnFwd()"></i></div>
+        </div>
+        <div class="row d-flex text-center align-items-center">
+          <p class="my-0" id="audtitle"></p>
         </div>
       </div>
 
